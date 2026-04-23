@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Variable global globarVar ubicada en el CODE segment
+// Variable global ubicada en el segmento de datos
 int globalVar = 10;
 
 void mostrarSegmentos() {
