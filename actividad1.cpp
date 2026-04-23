@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main(){
     int numero = 10;          // 1. Variable entera
     int* ptr = &numero;       // Puntero que guarda la dirección de 'numero'
 

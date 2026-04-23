@@ -4,9 +4,9 @@
 
 using namespace std;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]){
     //Verificar argumentos
-    if (argc < 3) {
+    if(argc < 3){
         cout << "Uso: ./actividad4 <filas> <columnas>" << endl;
         return 1;
     }
@@ -20,28 +20,28 @@ int main(int argc, char* argv[]) {
 
     // 2. Crear matriz dinamica 2D
     int** matriz = new int*[filas];
-    for (int i = 0; i < filas; i++) {
+    for(int i = 0; i < filas; i++){
         matriz[i] = new int[columnas];
     }
 
     // 3. Llenar la matriz con numeros aleatorios del 0 al 99
-    for (int i = 0; i < filas; i++) {
-        for (int j = 0; j < columnas; j++) {
+    for(int i = 0; i < filas; i++){
+        for(int j = 0; j < columnas; j++){
             matriz[i][j] = rand() % 100;
         }
     }
 
     //Mostrar la matriz
     cout << "=== Matriz generada aleatoriamente (" << filas << "x" << columnas << ") ===" << endl;
-    for (int i = 0; i < filas; i++) {
-        for (int j = 0; j < columnas; j++) {
+    for(int i = 0; i < filas; i++){
+        for(int j = 0; j < columnas; j++){
             cout << matriz[i][j] << "\t";
         }
         cout << endl;
     }
 
     //4. Liberar memoria
-    for (int i = 0; i < filas; i++) {
+    for(int i = 0; i < filas; i++){
         delete[] matriz[i];
     }
     delete[] matriz;
